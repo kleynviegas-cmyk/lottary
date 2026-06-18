@@ -403,5 +403,3 @@ function AgeGate({ onConfirm }: { onConfirm: () => void }) {
   );
 }
 
-
-const lotteryStyles = lotteryStylesImport;
