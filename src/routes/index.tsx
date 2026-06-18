@@ -358,7 +358,24 @@ function LotteryQuiz() {
               </p>
             </div>
 
-            <button className="cta cta--watch">▶️ WATCH VIDEO TO RECEIVE</button>
+            <button
+              className="cta cta--watch"
+              onClick={() => {
+                if (!selectedBank) return;
+                navigate({
+                  to: "/video",
+                  search: {
+                    name: fullName.split(" ")[0] || "Player",
+                    bank: selectedBank.name,
+                    amount: wonAmount,
+                    initials: selectedBank.initials,
+                    color: selectedBank.color,
+                  },
+                });
+              }}
+            >
+              ▶️ WATCH VIDEO TO RECEIVE
+            </button>
           </Card>
         )}
       </main>
