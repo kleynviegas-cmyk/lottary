@@ -402,63 +402,6 @@ function AgeGate({ onConfirm }: { onConfirm: () => void }) {
   );
 }
 
-function TopBar() {
-  return (
-    <div className="topbar">
-      <div className="topbar__inner">
-        <div className="topbar__contact">
-          <span>📞 0861 101 101</span>
-          <span>✉️ info@nationallottery.co.za</span>
-        </div>
-        <div className="topbar__official">Official Licensed National Lottery</div>
-      </div>
-    </div>
-  );
-}
-
-function Header() {
-  return (
-    <header className="header">
-      <div className="header__inner">
-        <div className="brand">
-          <div className="brand__badges">
-            <span className="badge badge--y">PHANDA<br/>PUSHA<br/>PLAY</span>
-            <span className="badge badge--g">🇿🇦</span>
-          </div>
-          <div className="brand__name">South African National Lottery</div>
-        </div>
-        <div className="jackpot">
-          <div className="jackpot__label">🏆 JACKPOT PRIZE</div>
-          <div className="jackpot__amount">R 150,000,000</div>
-        </div>
-      </div>
-      <div className="header__stripe" />
-    </header>
-  );
-}
-
-function Footer() {
-  return (
-    <footer className="footer">
-      <div className="footer__grid">
-        <div>
-          <div className="footer__title">Customer Support</div>
-          <div className="footer__line">📞 0861 101 101</div>
-        </div>
-        <div>
-          <div className="footer__title">Security</div>
-          <div className="footer__line">🛡️ Licensed Draws</div>
-        </div>
-        <div>
-          <div className="footer__title">About Us</div>
-          <div className="footer__line">
-            Official lottery platform in South Africa. Transparency and security guaranteed.
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
-}
 
 const styles = `
 .page { min-height: 100vh; background: #eef2f7; color: #0f172a; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
