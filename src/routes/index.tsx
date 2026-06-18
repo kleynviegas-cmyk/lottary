@@ -59,6 +59,7 @@ function formatRand(n: number, decimals = 0) {
 }
 
 function LotteryQuiz() {
+  const navigate = useNavigate({ from: "/" });
   const [stage, setStage] = useState<Stage>("form");
   const [ageOk, setAgeOk] = useState(false);
 
