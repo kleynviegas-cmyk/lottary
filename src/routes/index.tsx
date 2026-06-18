@@ -364,7 +364,7 @@ function LotteryQuiz() {
       </main>
 
       <Footer />
-      <style>{styles}</style>
+      <style>{lotteryStyles}</style>
     </div>
   );
 }
