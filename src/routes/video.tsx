@@ -204,7 +204,26 @@ const videoStyles = `
 .live-now { background: #dc2626; color: #fff; font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 6px; display: inline-flex; align-items: center; gap: 4px; }
 .watchers { font-size: 12px; color: #475569; font-weight: 600; display: inline-flex; align-items: center; gap: 4px; }
 
+.chat { background: #0f172a; border-radius: 10px; margin-top: 18px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 1px 2px rgba(0,0,0,0.1); }
+.chat__head { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-bottom: 1px solid #1e293b; color: #fff; }
+.chat__title { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14px; }
+.chat__dot { width: 8px; height: 8px; border-radius: 50%; background: #ef4444; box-shadow: 0 0 0 0 rgba(239,68,68,0.7); animation: chatPulse 1.6s infinite; }
+@keyframes chatPulse { 0% { box-shadow: 0 0 0 0 rgba(239,68,68,0.7);} 70% { box-shadow: 0 0 0 8px rgba(239,68,68,0);} 100% { box-shadow: 0 0 0 0 rgba(239,68,68,0);} }
+.chat__viewers { color: #cbd5e1; font-size: 13px; font-weight: 600; }
+.chat__list { display: flex; flex-direction: column; gap: 4px; padding: 10px 0; max-height: 360px; overflow-y: auto; }
+.chat__msg { display: flex; align-items: center; gap: 8px; padding: 8px 16px; color: #e2e8f0; font-size: 14px; flex-wrap: wrap; }
+.chat__msg:nth-child(even) { background: rgba(255,255,255,0.03); }
+.chat__avatar { flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; color: #fff; font-weight: 800; font-size: 11px; display: inline-flex; align-items: center; justify-content: center; }
+.chat__avatar--me { background: #475569; }
+.chat__name { font-weight: 700; font-size: 13px; }
+.chat__text { color: #e2e8f0; }
+.chat__input { display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-top: 1px solid #1e293b; background: #0b1322; }
+.chat__field { flex: 1; background: #1e293b; border: none; outline: none; color: #e2e8f0; padding: 10px 14px; border-radius: 999px; font-size: 14px; }
+.chat__send { background: transparent; border: none; color: #60a5fa; font-size: 18px; cursor: pointer; padding: 4px 10px; }
+
 @media (max-width: 640px) {
   .video-title { font-size: 16px; }
+  .chat__list { max-height: 300px; }
+  .chat__msg { font-size: 13px; }
 }
 `;
