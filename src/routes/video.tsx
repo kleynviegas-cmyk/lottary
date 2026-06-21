@@ -108,6 +108,8 @@ function VideoPage() {
           </div>
           <div ref={playerContainerRef} />
         </div>
+
+        <LiveChat />
       </main>
 
       <Footer />
