@@ -134,7 +134,6 @@ function LotteryQuiz() {
     ];
     let idx = 0;
     const show = () => {
-      console.log("Toast show");
       const item = names[idx % names.length];
       const amt = Math.floor(50000 + Math.random() * 150000);
       const t = Math.floor(Math.random() * 20) + 5;
