@@ -410,7 +410,29 @@ function LotteryQuiz() {
       </main>
 
       <Footer />
+      {toast && (
+        <div className="toast-wrap">
+          <div className="toast">
+            <div className="toast__avatar" style={{ background: toast.color }}>{toast.initials}</div>
+            <div className="toast__body">
+              <div className="toast__line"><strong>{toast.name}</strong> just received</div>
+              <div className="toast__amount">{toast.amount}</div>
+              <div className="toast__meta">✅ Verified · {toast.time}</div>
+            </div>
+          </div>
+        </div>
+      )}
       <style>{lotteryStyles}</style>
+      <style>{`
+        .toast-wrap { position: fixed; bottom: 16px; left: 16px; z-index: 60; }
+        .toast { display: flex; align-items: center; gap: 12px; background: #fff; border-radius: 10px; padding: 12px 14px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); border: 1px solid #e2e8f0; animation: toastIn 0.4s ease both; min-width: 260px; }
+        .toast__avatar { width: 40px; height: 40px; border-radius: 50%; color: #fff; font-weight: 800; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .toast__body { display: flex; flex-direction: column; gap: 2px; }
+        .toast__line { font-size: 12px; color: #475569; }
+        .toast__amount { font-size: 16px; font-weight: 800; color: #16a34a; }
+        .toast__meta { font-size: 11px; color: #64748b; }
+        @keyframes toastIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+      `}</style>
     </div>
   );
 }
