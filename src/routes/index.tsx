@@ -117,6 +117,35 @@ function LotteryQuiz() {
     });
   }
 
+  const [toast, setToast] = useState<{ name: string; initials: string; color: string; amount: string; time: string } | null>(null);
+
+  useEffect(() => {
+    const names = [
+      { n: "John Brown", i: "JB", c: "#E2231A" },
+      { n: "Thandi Nkosi", i: "TN", c: "#00945E" },
+      { n: "Sipho Molefe", i: "SM", c: "#0033A0" },
+      { n: "Zanele Dube", i: "ZD", c: "#006A4D" },
+      { n: "Mandla Ncube", i: "MN", c: "#111827" },
+      { n: "Lerato Phiri", i: "LP", c: "#0B5FA5" },
+      { n: "Bongani Khumalo", i: "BK", c: "#FFC72C" },
+      { n: "Ayanda Mthembu", i: "AM", c: "#A8123E" },
+      { n: "Themba Sithole", i: "TS", c: "#D2202F" },
+      { n: "Precious Dlamini", i: "PD", c: "#6366f1" },
+    ];
+    let idx = 0;
+    const show = () => {
+      const item = names[idx % names canlınames.length];
+      const amt = Math.floor(50000 + Math.random() * 150000);
+      const t = Math.floor(Math.random() * 20) + 5;
+      setToast({ name: item.n, initials: item.i, color: item.c, amount: "R " + amt.toLocaleString("en-ZA"), time: t + "s ago" });
+      idx++;
+      setTimeout(() => setToast(null), 4000);
+    };
+    show();
+    const id = setInterval(show, 6000);
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <div className="page">
       {!ageOk && <AgeGate onConfirm={() => setAgeOk(true)} />}
