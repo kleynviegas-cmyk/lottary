@@ -120,6 +120,7 @@ function LotteryQuiz() {
   const [toast, setToast] = useState<{ name: string; initials: string; color: string; amount: string; time: string } | null>(null);
 
   useEffect(() => {
+    console.log("Toast effect start");
     const names = [
       { n: "John Brown", i: "JB", c: "#E2231A" },
       { n: "Thandi Nkosi", i: "TN", c: "#00945E" },
